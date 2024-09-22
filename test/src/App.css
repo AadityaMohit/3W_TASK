@@ -1,0 +1,187 @@
+.app-container {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.home-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  background-color: #007bff;
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.header-text {
+  background-color: #e0e0e0;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-right: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.header-text:hover {
+  background-color: #ccc;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.badge-icon {
+  display: flex;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.badge-icon:hover {
+  background-color: #ddd;
+}
+
+.badge-text {
+  margin-left: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.task-alert {
+  background-color: #f39c12;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.referral-banner {
+  background-color: #ff9800;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  color: white;
+}
+
+.wallet-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 10px;
+}
+
+.wallet-card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1 1 calc(33% - 20px);
+  max-width: 200px;
+  margin: 10px;
+}
+
+.leaderboard-section {
+  padding: 10px;
+  text-align: center;
+}
+
+.leaderboard-section img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.social-media-task {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.social-media-icon {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media (max-width: 600px) {
+  .header, .header-right {
+    flex-direction: row; /* Keep items horizontal */
+    justify-content: flex-end; /* Center items horizontally */
+  }
+
+  .header-left {
+    flex-direction: unset; /* Ensure header left items are also horizontal */
+  }
+
+  .badge-icon {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .wallet-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .social-media-icon {
+    flex: 1 1 30%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+  .wallet-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .social-media-icon {
+    flex: 1 1 40%;
+  }
+}
+
+@media (min-width: 900px) {
+  .wallet-card {
+    flex: 1 1 calc(33% - 20px);
+  }
+
+  .social-media-icon {
+    flex: 1 1 calc(20% - 20px);
+  }
+}
